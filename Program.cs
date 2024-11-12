@@ -1,26 +1,28 @@
 ﻿using System;
-namespace Task_4
+namespace Task_5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the range of numbers:");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int a = 0;
-            int b = 1;
-            int c = 0;
-            Console.Write(a + " ");
-            Console.Write(b + " ");
-            for (int i = 0; i < n; i++)
+            Console.Write("Enter the first number: ");
+            int A = int.Parse(Console.ReadLine());
+            Console.Write("Enter the second number: ");
+            int B = int.Parse(Console.ReadLine());
+            if (A < B)
             {
-                c = a + b;
-                if (c <= n)
+                for (int i = A; i <= B; i++)
                 {
-                    Console.Write(c + " ");
-                    a = b;
-                    b = c;
+                    for (int j = 0; j < i; j++)
+                    {
+                        Console.Write(i + " ");
+                    }
+                    Console.WriteLine();
                 }
+            }
+            else
+            {
+                Console.WriteLine("The first number must be less than the second number");
             }
         }
     }
